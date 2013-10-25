@@ -11,7 +11,7 @@ Or clone this, and then index.html will open the timer and SpecRunner.html will 
 
 ## Libraries Used
 
-Only Jasmine for testing. jQuery seemed overkill for the basic rendering here.
+Only Jasmine for testing and RequireJS for managing source dependencies (because otherwise listing every javascript source in the html index is a pain and difficult to deploy). jQuery seemed overkill for the basic rendering here.
 
 ## Implementation Notes
 
@@ -29,3 +29,4 @@ Each part:
 * __timer-widget.js__ is not tested, because faking the clock and interface events are a pain
 * The rendering is slower than it could be, because it redraws the whole thing every 100ms. Doesn't seem to be an issue for something this simple, but could be improved with more state and e.g. svg animations
 * Doesn't work in IE8 because of the native SVG usage.
+* JS should be minified/combined using the RequireJS builder.
