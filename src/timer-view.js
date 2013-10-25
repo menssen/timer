@@ -21,6 +21,7 @@ define([
         this._innerRadius = innerRadius;
         this._colors = colors;
         this._initialMs = initialMs;
+        this._currentMs = currentMs;
         this._formatter = new formatter(initialMs, currentMs);
         this._meter = new meter(drawer, stroke, spacing, innerRadius, [
             {
@@ -59,6 +60,14 @@ define([
         // create a new timer view at a new end time, with the same properties
         tick: function(newMs) {
             return new view(this._stroke,this._spacing,this._innerRadius,this._colors,this._initialMs,newMs);
+        },
+
+        startTime: function() {
+            return this._initialMs;
+        },
+
+        currentTime: function() {
+            return this._currentMs;
         }
     };
 

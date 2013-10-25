@@ -24,6 +24,14 @@ define([
         it('ticks', function() {
             expect(tv.tick(86584200).timeString()).toBe('24:03:04');
         });
+
+        it('knows the start time', function() {
+            expect(tv.startTime()).toBe(0);
+        });
+
+        it('knows the current time', function() {
+            expect(tv.currentTime()).toBe(86462200);
+        });
     })
 });
 

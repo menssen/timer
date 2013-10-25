@@ -1,5 +1,6 @@
-require([
-    'circle-meter'
-], function(cM) {
-    console.log(cM.something);
+define([
+    'timer-widget'
+], function(timerWidget) {
+    var widget = new timerWidget('timer', 'start', 'reset');
+    widget.start();
 });

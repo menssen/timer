@@ -3,9 +3,9 @@
 define(function() {
     return function(drawer, stroke, spacing, innerRadius, circles) {
         var center = innerRadius + (stroke + spacing) * (circles.length - 1) + stroke;
-        var svg = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1">';
+        var svg = '<svg width="' + (center*2) + '" height="' + (center*2) + '" xmlns="http://www.w3.org/2000/svg" version="1.1">';
         for (var i in circles) {
-            svg += '<path d="'
+            svg += '<path fill="none" d="'
                  + drawer(center,center,(innerRadius+(i*(spacing+stroke))),circles[i].percent)
                  + '" stroke-width="' + stroke + '" stroke="' + circles[i].color + '" />';
         }

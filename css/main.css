@@ -1,0 +1,53 @@
+#timer {
+    width: 536px;
+    height: 536px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-top: -268px;
+    margin-left: -268px;
+}
+
+#timer div {
+    position: absolute;
+    height: 80px;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 80px;
+    font-family: "Helvetica","Arial",sans-serif;
+    margin-top: -40px;
+    color: #555;
+}
+
+a {
+    display: block;
+    width: 60px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    margin-top: 60px;
+    left: 50%;
+    margin-left: -125px;
+    color: #888;
+    text-decoration: none;
+    border: 1px solid #555;
+    border-radius: 40px;
+    padding: 10px;
+    padding-top: 30px;
+    font-family: "Helvetica","Arial",sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+a.reset {
+    margin-left: 35px;
+}
+
+a:active {
+    background-color: #888;
+}
+
+a:hover {
+    background-color: #DDD;
+}

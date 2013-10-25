@@ -19,13 +19,13 @@ define(['../src/percent-to-arc'], function(percentToArc) {
 
         it('outputs the correct arc length for the first arc', function() {
             // 25% should end up at the right middle
-            expect(percentToArc(50,50,50,.25).split('\n')[2]).toBe('a 50,50 0 1,0 50,50');
+            expect(percentToArc(50,50,50,.25).split('\n')[2]).toBe('a 50,50 0 0,1 50,50');
 
             // 0% should end up at the top center
-            expect(percentToArc(50,50,50,0).split('\n')[2]).toBe('a 50,50 0 1,0 0,0');
+            expect(percentToArc(50,50,50,0).split('\n')[2]).toBe('a 50,50 0 0,1 0,0');
 
             // 50% should end up at the bottom center
-            expect(percentToArc(50,50,50,.5).split('\n')[2]).toBe('a 50,50 0 1,0 0,100');
+            expect(percentToArc(50,50,50,.5).split('\n')[2]).toBe('a 50,50 0 0,1 0,100');
 
         });
 
@@ -34,15 +34,15 @@ define(['../src/percent-to-arc'], function(percentToArc) {
         });
 
         it('outputs a full first arc for numbers over 50%', function() {
-            expect(percentToArc(50,50,50,.9).split('\n')[2]).toBe('a 50,50 0 1,0 0,100');
+            expect(percentToArc(50,50,50,.9).split('\n')[2]).toBe('a 50,50 0 0,1 0,100');
         });
 
         it('outputs the correct arc length for the second arc', function() {
             // 75% should end up at the left middle
-            expect(percentToArc(50,50,50,.75).split('\n')[3]).toBe('a 50,50 0 1,0 -50,-50');
+            expect(percentToArc(50,50,50,.75).split('\n')[3]).toBe('a 50,50 0 0,1 -50,-50');
 
             // 100% should end up at the top center
-            expect(percentToArc(50,50,50,1).split('\n')[3]).toBe('a 50,50 0 1,0 0,-100');
+            expect(percentToArc(50,50,50,1).split('\n')[3]).toBe('a 50,50 0 0,1 0,-100');
 
         });
     });
