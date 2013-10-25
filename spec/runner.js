@@ -1,6 +1,7 @@
 require([
     'circle-meter',
-    'percent-to-arc'
+    'percent-to-arc',
+    'time-formatter'
 ], function() {
       var jasmineEnv = jasmine.getEnv();
       jasmineEnv.updateInterval = 1000;
